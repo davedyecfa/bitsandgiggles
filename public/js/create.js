@@ -6,31 +6,26 @@ $("#add-btn").on("click", function(event) {
   event.preventDefault();
 
   // make a newCharacter obj
-  var newCharacter = {
-    // name from name input
-    name: $("#name").val().trim(),
-    // role from role input
-    role: $("#role").val().trim(),
-    // age from age input
-    age: $("#age").val().trim(),
-    // points from force-points input
-    forcePoints: $("#force-points").val().trim()
+  var newShip = {
+    // shipname from shipname input
+    shipname: $("#name").val().trim(),
+    health: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
+    railgun: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
+    scanner: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
+    crew: Math.floor(Math.random() * (10 - 1 + 1)) + 1,
+    location: "1A"
   };
 
   // send an AJAX POST-request with jQuery
-  $.post("/api/new", newCharacter)
+  $.post("/api/new", newShip)
     // on success, run this callback
     .done(function(data) {
       // log the data we found
       console.log(data);
       // tell the user we're adding a character with an alert window
-      alert("Adding character...");
+      alert("Firing up Boosters...");
     });
 
   // empty each input box by replacing the value with an empty string
-  $("#name").val("");
-  $("#role").val("");
-  $("#age").val("");
-  $("#force-points").val("");
-
+  $("#shipname").val("");
 });

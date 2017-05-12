@@ -7,27 +7,23 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 // Creates a "Character" model that matches up with DB
-var Ship = sequelize.define("ship", {
+var Spacepirate = sequelize.define("spacepirate", {
   // the routeName gets saved as a string
   routeName: Sequelize.STRING,
   // the name of the character (a string)
-  shipname: Sequelize.STRING,
+  priatename: Sequelize.STRING,
   // the character's role (a string)
   health: Sequelize.INTEGER,
   // the character's age (a string)
   railgun: Sequelize.INTEGER,
-  // and the character's force points (an int)
-  scanner: Sequelize.INTEGER,
-  // and the character's force points (an int)
-  crew: Sequelize.INTEGER,
-  // and the character's force points (an int)
+  // the character's age (a string)
   location: Sequelize.STRING
 }, {
   timestamps: false
 });
 
 // Syncs with DB
-Ship.sync();
+Spacepirate.sync();
 
 // Makes the Character Model available for other files (will also create a table)
-module.exports = Ship;
+module.exports = Spacepirate;
