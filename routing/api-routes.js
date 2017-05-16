@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var Ship = require("../models/Ship.js");
+// var db = require("../config/connection.js")
 
 // Routes
 // =============================================================
@@ -46,10 +47,10 @@ module.exports = function(app) {
     var ship = req.body;
 
     // Create a routeName
-    var routeName = ship.name.replace(/\s+/g, "").toLowerCase();
+    var routeName = ship.shipname.replace(/\s+/g, "").toLowerCase();
 
     // Then add the ship to the database using sequelize
-    ship.create({
+    Ship.create({
       routeName: routeName,
       shipname: ship.shipname,
       health: ship.health,

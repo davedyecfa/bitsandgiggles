@@ -9,6 +9,7 @@ var bodyParser = require("body-parser");
 var app = express();
 var sequelize = require("sequelize");
 var path = require("path");
+var mysql = require("mysql");
 
 
 // Sets up the Express App
@@ -23,13 +24,13 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
-require("./app/routes/html-routes.js")(app);
+require("./routing/api-routes.js")(app);
+require("./routing/html-routes.js")(app);
 
 
 // Starts the server to begin listening
