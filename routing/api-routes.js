@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Ship = require("../models/Ship.js");
+var Ship = require("../models/ship.js");
 // var db = require("../config/connection.js")
 
 // Routes
