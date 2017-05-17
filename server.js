@@ -10,6 +10,7 @@ var app = express();
 var sequelize = require("sequelize");
 var path = require("path");
 var mysql = require("mysql");
+var db = require("./models/index.js");
 
 
 // Sets up the Express App
@@ -35,6 +36,8 @@ require("./routing/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+db.sequelize.sync({}).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
