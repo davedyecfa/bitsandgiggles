@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Ship = require("../models/ship.js");
+var db = require("../models/index.js");
 // var db = require("../config/connection.js")
 
 // Routes
@@ -19,7 +19,7 @@ module.exports = function(app) {
 
       // Then display the JSON for ONLY that ship.
       // (Note how we're using the ORM here to run our searches)
-      Ship.findOne({
+      db.Ship.findOne({
         where: {
           routeName: req.params.Ship
         }
@@ -32,7 +32,7 @@ module.exports = function(app) {
     else {
       // Otherwise display the data for all of the ships.
       // (Note how we're using Sequelize here to run our searches)
-      Ship.findAll({})
+      db.Ship.findAll({})
         .then(function(result) {
           return res.json(result);
         });
@@ -44,20 +44,19 @@ module.exports = function(app) {
   app.post("/api/new", function(req, res) {
 
     // Take the request...
-    var ship = req.body;
+    var newShip = req.body;
 
     // Create a routeName
-    var routeName = ship.shipname.replace(/\s+/g, "").toLowerCase();
+    var routeName = newShip.shipname.replace(/\s+/g, "").toLowerCase();
 
     // Then add the ship to the database using sequelize
-    Ship.create({
-      routeName: routeName,
-      shipname: ship.shipname,
-      health: ship.health,
-      railgun: ship.railgun,
-      scanner: ship.scanner,
-      crew: ship.crew,
-      location: ship.location
+    db.Ship.create({
+      shipName: newShip.shipname,
+      health: newShip.health,
+      railgun: newShip.railgun,
+      scanner: newShip.scanner,
+      crew: newShip.crew,
+      location: newShip.location
     });
 
   });
