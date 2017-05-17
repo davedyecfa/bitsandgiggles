@@ -20,8 +20,8 @@ module.exports = function(app) {
 
   // add route loads the add.html page,
   // where users can enter new characters to the db
-  app.get("/create", function(req, res) {
-    res.sendFile(path.join(__dirname + "/../public/create.html"));
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../public/add.html"));
   });
 
   // all route loads the all.html page,

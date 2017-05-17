@@ -1,10 +1,10 @@
 // Code here handles what happens when a user submits a new character on the form.
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
-
+console.log("loading create.js");
 // when user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
-
+console.log("running create.js");
   // make a newCharacter obj
   var newShip = {
     // shipname from shipname input
