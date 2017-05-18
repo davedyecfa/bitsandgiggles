@@ -1,15 +1,24 @@
-var Spacepirates = [
-
-  {
-    piratename: "Atomsk",
-    health: 10,
-    railgun: 7,
-    location: "1A"
-  },
-  {
-    piratename: 
-  }
-]
-
-// Makes the Character Model available for other files (will also create a table)
-module.exports = Spacepirate;
+module.exports = function(sequelize, DataTypes) {
+  var SpacePirate = sequelize.define("SpacePirate", {
+    pirateName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    health: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    railgun: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+    
+  }, {
+    timestamps: false
+  });
+  return SpacePirate;
+};

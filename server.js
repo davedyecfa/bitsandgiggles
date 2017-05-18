@@ -10,6 +10,12 @@ var app = express();
 var sequelize = require("sequelize");
 var path = require("path");
 var mysql = require("mysql");
+var db = require("./models/index.js");
+var routes = require('./routes');
+var passport = require('passport');
+var passportConfig = require('./config/passport');
+var home = require('./routes/home');
+var application = require('./routes/application');
 
 
 // Sets up the Express App
@@ -22,9 +28,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(express.urlencoded());
+app.use(express.bodyParser());
+app.use(express.cookieParser());
+
+
+
 
 // Static directory
 app.use(express.static(path.join(__dirname, "public")));
+app.set('views', __dirname + '/views');
 
 
 // Routes
@@ -35,6 +48,8 @@ require("./routing/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+db.sequelize.sync({force: true}).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });

@@ -1,33 +1,31 @@
-// Dependencies
-// =============================================================
-
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
-// Creates a "Character" model that matches up with DB
-var Ship = sequelize.define("ship", {
-  // the routeName gets saved as a string
-  routeName: Sequelize.STRING,
-  // the name of the character (a string)
-  shipname: Sequelize.STRING,
-  // the character's role (a string)
-  health: Sequelize.INTEGER,
-  // the character's age (a string)
-  railgun: Sequelize.INTEGER,
-  // and the character's force points (an int)
-  scanner: Sequelize.INTEGER,
-  // and the character's force points (an int)
-  crew: Sequelize.INTEGER,
-  // and the character's force points (an int)
-  location: Sequelize.STRING
-}, {
-  timestamps: false
-});
-
-// Syncs with DB
-Ship.sync();
-
-// Makes the Character Model available for other files (will also create a table)
-module.exports = Ship;
+module.exports = function(sequelize, DataTypes) {
+  var Ship = sequelize.define("Ship", {
+    shipName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    health: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    railgun: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    scanner: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    crew: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+  }, {
+    timestamps: false
+  });
+  return Ship;
+};
