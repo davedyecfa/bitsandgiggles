@@ -4,7 +4,7 @@ create DATABASE TestSB;
 
 CREATE TABLE users(
 Username varchar(128) Not Null,
-Location varchar(3) Not Null,
+Location varchar(10) Not Null,
 Hp int(4),
 Weapon int(3),
 speed int(1),
@@ -18,6 +18,10 @@ thrustername varchar(128)
 );
 
 use TestSB;
+/*insert into users(Username,Location, Hp, Weapon, speed, crew, sensor, kills, armor, sensorname, weaponname, thrustername)
+values("Socks2","1,1", 100 , 20, 2, 500, 0, 1, "Martian", "V.1", "Railgun", "V.2-AB");
+*/
+
 
 CREATE TABLE pirates(
 id int auto_increment NOT NULL, 
@@ -27,7 +31,9 @@ speed int(1),
 PRIMARY KEY(id)
 );
 
-/*select * from pirates;*/
+/*insert into pirates(hp, weapon, speed)
+values(100, 30, 2);
+*/
 
 CREATE TABLE items(
 name varchar(128),
@@ -35,6 +41,19 @@ type varchar(10),
 value int(4)
 );
 
-select * from items;
+select * from pirates;
 
+CREATE table map(
+location varchar(10),
+planet boolean,
+scannable boolean, 
+pirate boolean, 
+warning boolean, 
+sun boolean, 
+scan int(2),
+planet varchar(15)
+/*pirate foreign id,
+scanloot foreign id 
+*/
+);
 
