@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Space Battle!</title>
+
+	<!--Bootstrap layout link-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+    <!--jQuery link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--Google fonts links-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+
+    <!--Link to Moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+    <!--My CSS Stylesheet link-->
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-md-12">
+			<img src="./img/battle_title.png">
+		</div>
+        <div class="row" id="names-row">
+            <div class="col-md-5">
+                <img src="./img/player_text.png">
+            </div>
+            <div class="col-md-1">
+                <img src="./img/vs.png">
+            </div>
+            <div class="col-md-5">
+                <img src="./img/pirate_text.png">
+            </div>
+        </div>
+        <div class="row" id="ships-row">
+            <div class="col-md-5">
+                <img src="./img/player_ship.jpg">
+            </div>
+            <div class="col-md-1">
+                
+            </div>
+            <div class="col-md-5">
+                <img src="./img/pirate_ship.jpg">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <button><h3 style="color: black; background-color: white;">Attack</h3></button>
+                <button><h3 style="color: black; background-color: white;">Defend</h3></button>
+                <button><h3 style="color: black; background-color: white;">
+                    <a href="game.html">Run Away</a></h3></button>
+            </div>
+            <div class="col-md-9">
+                <textarea class="scrollabletextbox" name="battle_log">
+
+                </textarea>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>

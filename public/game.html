@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spaceballs Game!</title>
+        <!--Bootstrap layout link-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--jQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--Google fonts links-->
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+        
+        <!--My CSS Stylesheet link-->
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=""><h2 id="username">USERNAME</h2></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><h3><a href="game_over.html" class="navbar-brand">Save and Exit</a></h3></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-2">
+                        <div class="panel">
+                        <div class="panel-body">
+                            <h2>Ship Stats</h2>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="stats">
+                            <h3 id="health">Health: </h3>
+                            <h3 id="armor">Armor: </h3>
+                            <h3 id="speed">Speed: </h3>
+                            <h3 id="scanner">Scanner: </h3>
+                            <h3 id="crew">Crew: </h3>
+                            <h3 id="kills">Pirate Kills: </h3>
+                        </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8 grid">
+                        
+                        <canvas id="GameMap" width="750" height= "750" style = "border:5px solid green">
+                        <p>Your browser doesn’t currently support HTML5 Canvas. 
+                        Please check caniuse.com/#feat=canvas for information on 
+                        browser support for canvas.</p> </canvas>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel">
+                        <div class="panel-body">
+                            <h2>Events Console</h2>
+                        </div>
+                        <div class="panel-footer">
+                        <div class="events">
+                            <h3>Attacked By Pirates! ... or something else</h3>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </body>
+        </html>

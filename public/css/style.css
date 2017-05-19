@@ -1,0 +1,102 @@
+body {
+	background-image: url("../img/home_space.jpg");
+}
+
+.jumbotron {
+	height: 20% !important;
+	color: orange;
+	text-align: center;
+	background-color: black;
+}
+
+li {
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: white;
+	font-family: 'Baloo', cursive;
+	text-align: center;
+	text-shadow: 5px 5px black;
+}
+
+h3 {
+	color: white;
+	background-color: black;
+}
+
+input {
+	background-color: black;
+}
+
+#names-row {
+	text-align: center;
+}
+
+#ships-row {
+	text-align: center;
+}
+
+.col-md-12 {
+	text-align: center;
+}
+.col-md-6 {
+	text-align: center;
+}
+
+.col-md-3 {
+	text-align: center;
+}
+
+#mars {
+	float: left;
+	text-align: left;
+}
+
+#new-game {
+	text-align: right;
+}
+
+#continue {
+	text-align: left;
+}
+
+.navbar-default .navbar-nav {
+
+    border-color: black;
+}
+
+.navbar {
+	border-color: black !important;
+}
+
+.container-fluid {
+	border-color: black !important;
+	background-color: #092044;
+}
+
+.panel-body {
+	background-color: #092044 !important;
+}
+
+.panel {
+	border-color: black !important;
+}
+
+.console {
+	float: right;
+}
+
+.grid {
+	padding: 10px;
+	text-align: center;
+}
+
+.scrollabletextbox {
+	width: 800px;
+	height: 150px;
+}
