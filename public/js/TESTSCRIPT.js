@@ -18,21 +18,21 @@
     return false;
   	};
    this.attack = function(defender){
-   	$("#target").append("<p>"+this.user+ " attacked</p>");
+   	$("#scrollbox").append("<p>"+this.user+ " attacked</p>");
 	  	var roll = Math.random() * (20) + this.speed;
 		if(roll >= Math.random() * (20) + defender.speed){
 		defender.hp -= this.weapon;
 
-		$("#target").append( "<p>" +this.user + " did "+ this.weapon+ " damage. " + defender.user+" has "+ defender.hp + " health remaining</p>"); 
+		$("#scrollbox").append( "<p>" +this.user + " did "+ this.weapon+ " damage. " + defender.user+" has "+ defender.hp + " health remaining</p>"); 
 
 		defender.life();
 		}
 		else{
-			$("#target").append("<p>" +this.user + " missed</p>");
+			$("#scrollbox").append("<p>" +this.user + " missed</p>");
 		}	
  	 }
  	this.defend = function(){
- 		$("#target").append("<p>" +this.user + " defended</p>");
+ 		$("#scrollbox").append("<p>" +this.user + " defended</p>");
  		var defend = this.speed * 2;
  		this.speed = defend;   
  	}
@@ -54,21 +54,21 @@ function Pirate( user, hp, weapon, speed, location){
     return false;
   };
   	this.attack = function(defender){
-	   	$("#target").append("<p>"+this.user+ " attacked</p>");
+	   	$("#scrollbox").append("<p>"+this.user+ " attacked</p>");
 		  	var roll = Math.random() * (20) + this.speed;
 			if(roll >= Math.random() * (20) + defender.speed){
 			defender.hp -= this.weapon;
 
-			$("#target").append( "<p>" +this.user + " did "+ this.weapon+ " damage. " + defender.user+" has "+ defender.hp + " health remaining</p>"); 
+			$("#scrollbox").append( "<p>" +this.user + " did "+ this.weapon+ " damage. " + defender.user+" has "+ defender.hp + " health remaining</p>"); 
 
 			defender.life();
 			}
 			else{
-				$("#target").append("<p>" +this.user + " missed</p>");
+				$("#scrollbox").append("<p>" +this.user + " missed</p>");
 			}	
  	 }	
 	this.defend = function(){
- 		$("#target").append("<p>" +this.user + " defended</p>");
+ 		$("#scrollbox").append("<p>" +this.user + " defended</p>");
  		var defend = this.speed * 2;
  		this.speed = defend;   
  	}
@@ -76,17 +76,11 @@ function Pirate( user, hp, weapon, speed, location){
 }
 
 
-var tuser = new Player("Test user", 600, 300, 5, 100, "A1");
+var tuser = new Player("Test user", 600, 60, 5, 100, "A1");
 
 var tpir = new Pirate("Test Pirate", 500, 60, 5, "A1");
 
-function Load(play, pira){
 
-	$("#stat-target").html("<p>" + "Name: "+ play.user + "</p>"+ "<p>"+"Health remaining: "+ play.hp+ "</p>"+ "<p>"+"Weapon damage: "+ play.weapon + "</p>"+ "<p>"+ "Speed: " + play.speed+ "</p>");
-	$("#pirate-target").html("<p>" + "Name: "+ pira.user + "</p>"+ "<p>"+"Health remaining: "+ pira.hp+ "</p>"+ "<p>"+"Weapon damage: "+ pira.weapon + "</p>"+ "<p>"+ "Speed: " + pira.speed+ "</p>");
-
-};
-$(document).ready(Load(tuser,tpir));
 
 
 $("#attack").on("click", function(){
@@ -101,7 +95,7 @@ $("#attack").on("click", function(){
 				}
 			}
 			else{
-				$("#target").append("<p>"+tpir.user+" is defeated!"+"</p>");
+				$("#scrollbox").append("<p>"+tpir.user+" is defeated!"+"</p>");
 				$("#buttons").empty();
 				tuser.kills++;
 				console.log(tuser.kills);
@@ -115,7 +109,7 @@ $("#attack").on("click", function(){
 				tpir.speed = speedholder;
 			}
 			else{
-				$("#target").append("<p>"+tpir.user+" is defeated!"+"</p>");
+				$("#scrollbox").append("<p>"+tpir.user+" is defeated!"+"</p>");
 				$("#buttons").empty();
 				tuser.kills++;
 				console.log(tuser.kills);
@@ -126,11 +120,11 @@ $("#attack").on("click", function(){
 			
 			}
 			if(tuser.hp <= 0){
-				$("#target").append("<p font-color='red'> YOU ARE DEFEATED. A CAPTAIN ALWAYS GOES DOWN WITH HIS SHIP.  </p>" );
+				$("#scrollbox").append("<p font-color='red'> YOU ARE DEFEATED. A CAPTAIN ALWAYS GOES DOWN WITH HIS SHIP.  </p>" );
 				$("#buttons").empty();
 		}
 		if(tpir.hp <= 0){
-			$("#target").append("<p>"+tpir.user+" is defeated!"+"</p>");
+			$("#scrollbox").append("<p>"+tpir.user+" is defeated!"+"</p>");
 				$("#buttons").empty();
 				tuser.kills++;
 				console.log(tuser.kills);
