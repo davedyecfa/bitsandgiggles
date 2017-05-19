@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Earth</title>
+
 	<!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -10,6 +11,9 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!--My CSS Stylesheet link-->
     <link rel='stylesheet' type='text/css' href='../css/style.css'>
@@ -34,7 +38,7 @@
 			<p>Welcome to Earth! What would you like to do next?</p>
 			</div>
 			<div class="col-md-12">
-				<img src="../img/explore.png">
+				<a data-toggle="modal" href="#earth-m"><img src="../img/explore.png"></a>
 			</div>
 			<div class="col-md-12">
 				<a href="../game.html"><img src="../img/go_back.png"></a>
@@ -42,6 +46,26 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="earth-m" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Earth Exploration</h4>
+        </div>
+        <div class="modal-body">
+          <h4>5 crew members have been assigned to the ship.</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 </body>
 </html>

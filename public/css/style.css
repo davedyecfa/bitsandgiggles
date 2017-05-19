@@ -17,6 +17,11 @@ h1 {
 	color: white;
 }
 
+p {
+	color: white;
+	background-color: black;
+}
+
 h2 {
 	color: white;
 	font-family: 'Baloo', cursive;
@@ -85,6 +90,10 @@ input {
 
 .panel {
 	border-color: black !important;
+}
+
+.panel-footer {
+	background-color: black;
 }
 
 .console {

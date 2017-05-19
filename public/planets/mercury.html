@@ -11,6 +11,9 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <!--My CSS Stylesheet link-->
     <link rel='stylesheet' type='text/css' href='../css/style.css'>
 </head>
@@ -34,7 +37,7 @@
 			<p>Welcome to Mercury! What would you like to do next?</p>
 			</div>
 			<div class="col-md-12">
-				<img src="../img/explore.png">
+				<a data-toggle="modal" href="#mercury-m"><img src="../img/explore.png"></a>
 			</div>
 			<div class="col-md-12">
 				<a href="../game.html"><img src="../img/go_back.png"></a>
@@ -42,6 +45,26 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="mercury-m" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Mercury Exploration</h4>
+        </div>
+        <div class="modal-body">
+          <h4>You have found a design for new thrusters. Speed increased by 1.</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 </body>
 </html>
