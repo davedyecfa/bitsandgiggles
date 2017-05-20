@@ -60,15 +60,24 @@
           <h4 class="modal-title">Mars Exploration</h4>
         </div>
         <div class="modal-body">
-          <h4>Mars has the best weapons in the system. Your railgun damage has been increased by 50.</h4>
+          <h4>The Martian Congressional Republic is an independent military power, having declared independence from Earth over a century ago. It has the best navy in the system and have colonies in the outer planets.</h4>
+          <h4>Mars has the best weapons in the system. Since you are in a Martian frigate, the Mars Navy has offered to add a railgun to your weapon systems. Your damage has been increased by 25.</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var weapon = Number(localStorage.getItem("weapon"));
+			weapon += 25;
+			localStorage.setItem("weapon",weapon);
+		});
+	</script>
 
 </body>
 </html>

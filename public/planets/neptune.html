@@ -56,15 +56,24 @@
           <h4 class="modal-title">Neptune Exploration</h4>
         </div>
         <div class="modal-body">
-          <h4>You found some scraps of hull plating. Use them to repair your armor. Health + 50</h4>
+          <h4>Neptune is a massive gas giant and is so far from the other planets that only pirates ever venture here. And even those rarely come this way.</h4>
+          <h4>You found some scraps of hull plating, probably from a pirate ship destroyed by Martian Navy patrols. Use them to repair your armor. Health + 25</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var health = Number(localStorage.getItem("health"));
+			health += 5;
+			localStorage.setItem("health",health);
+		});
+	</script>
 
 </body>
 </html>

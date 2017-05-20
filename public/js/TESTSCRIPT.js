@@ -97,9 +97,9 @@ $("#attack").on("click", function(){
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
 				tuser.kills++;
-				setTimeout(1000,function(){
+				setTimeout(function(){
 					window.location.replace("./game.html");
-				})
+				},4000);
 				console.log(tuser.kills);
 			}
 			break;
@@ -113,9 +113,9 @@ $("#attack").on("click", function(){
 			else{
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
-				setTimeout(1000,function(){
+				setTimeout(function(){
 					window.location.replace("./game_over.html");
-				})
+				},4000);
 				tuser.kills++;
 				console.log(tuser.kills);
 
@@ -127,16 +127,16 @@ $("#attack").on("click", function(){
 			if(tuser.hp <= 0){
 				$("#scrollbox").prepend("YOU ARE DEFEATED. A CAPTAIN ALWAYS GOES DOWN WITH HIS SHIP." +"\n");
 				$("#buttons").empty();
-				setTimeout(1000,function(){
+				setTimeout(function(){
 					window.location.replace("./game_over.html");
-				})
+				},4000);
 		}
 		if(tpir.hp <= 0){
 			$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
-				setTimeout(1000,function(){
+				setTimeout(function(){
 					window.location.replace("./game.html");
-				})
+				},4000);
 				
 				tuser.kills++;
 				console.log(tuser.kills);

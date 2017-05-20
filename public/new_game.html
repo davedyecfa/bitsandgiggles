@@ -45,6 +45,20 @@
     function storeUN(){
         var username = $("#username").val().trim();
         localStorage.setItem("username",username);
+
+        var health = 400;
+        var weapon = 60;
+        var speed = 1;
+        var scanner = 1;
+        var crew = 10;
+        var kills = 0;
+
+        localStorage.setItem("health",health);
+        localStorage.setItem("weapon",weapon);
+        localStorage.setItem("speed",speed);
+        localStorage.setItem("scanner",scanner);
+        localStorage.setItem("crew",crew);
+        localStorage.setItem("kills",kills);
     }
     </script>
 

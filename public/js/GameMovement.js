@@ -118,7 +118,7 @@ function Move(){
 }
 
 
-var tuser = new Player("Test user", 600, 300, 1, 100, 1, "2,2");
+var tuser = new Player("Test user", 600, 300, 1, 100, 1, "6,6");
 
 var locationArr = tuser.location.split(",");
 var Normal = new Move();
@@ -293,12 +293,12 @@ var canvas = document.getElementById('GameMap'),
 		//Earth (6,6)
 		c.beginPath();
 		c.fillStyle = "blue";
-		c.arc(275,275,13, 0, Math.PI * 2, false);
+		c.arc(285,285,13, 0, Math.PI * 2, false);
 		c.fill();
 		//Mars (7,10)
 		c.beginPath();
 		c.fillStyle = "red";
-		c.arc(325,475,13, 0, Math.PI * 2, false);
+		c.arc(315,485,13, 0, Math.PI * 2, false);
 		c.fill();
 		//Jupiter (11,5)
 		c.beginPath();
@@ -385,12 +385,12 @@ window.location.replace("./battle.html");
 
 		case "4,8": //PIRATE 10
 $("#target-move").html(tuser.location);
-window.location.replace("./battle.html");
+
 		break;
 
 		case "4,10"://PIRATE  11
 $("#target-move").html(tuser.location);
-window.location.replace("./battle.html");
+
 		break;
 
 		case "4,12": //Planet Saturn

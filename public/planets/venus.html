@@ -56,15 +56,24 @@
           <h4 class="modal-title">Venus Exploration</h4>
         </div>
         <div class="modal-body">
-          <h4>You found a derelict ship floating in the toxic atmosphere. Armor is increased by 40.</h4>
+          <h4>Venus is not a human colony, but has several Earther and Martian science stations floating in low orbit.</h4>
+          <h4>You found a derelict ship floating in the toxic atmosphere. You were able to strip some of its hull and patch some faults in your ship. Health is increased by 40.</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
+
+	<script type="text/javascript">
+		$("#m-c").click(function(){
+			var health = Number(localStorage.getItem("health"));
+			health += 40;
+			localStorage.setItem("health",health);
+		});
+	</script>
 
 </body>
 </html>

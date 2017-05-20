@@ -56,15 +56,24 @@
           <h4 class="modal-title">Mercury Exploration</h4>
         </div>
         <div class="modal-body">
-          <h4>You have found a design for new thrusters. Speed increased by 1.</h4>
+          <h4>Mercury was a large scale mining outpost for Earth for many decades, but experienced several reactor meltdowns and the planet has been abandoned for several years.</h4>
+          <h4>You have found a design for new thrusters in an abandoned mine. Speed increased by 1.</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var speed = Number(localStorage.getItem("speed"));
+			speed += 1;
+			localStorage.setItem("speed",speed);
+		});
+	</script>
 
 </body>
 </html>

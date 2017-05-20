@@ -48,12 +48,11 @@
                         </div>
                         <div class="panel-footer">
                             <div class="stats">
-                            <h3 id="health">Health: 400</h3>
-                            <h3 id="armor">Weapon: 60</h3>
-                            <h3 id="speed">Speed: 1</h3>
-                            <h3 id="scanner">Scanner: 1</h3>
-                            <h3 id="crew">Crew: 10</h3>
-                            <h3 id="kills">Pirate Kills: 0</h3>
+                            <h3>Health: </h3><h3 id="health">--</h3>
+                            <h3>Weapon: </h3><h3 id="weapon">--</h3>
+                            <h3>Speed: </h3><h3 id="speed">--</h3>
+                            <h3>Crew: </h3><h3 id="crew">--</h3>
+                            <h3>Pirate Kills: </h3><h3 id="kills">--</h3>
                         </div>
                         </div>
                         </div>
@@ -117,6 +116,13 @@
             </body>
             <script type="text/javascript" src="./js/GameMovement.js"></script>
             <script type="text/javascript">
+
                 document.getElementById("current-user").innerHTML = localStorage.getItem("username");
+                document.getElementById("health").innerHTML = localStorage.getItem("health");
+                document.getElementById("weapon").innerHTML = localStorage.getItem("weapon");
+                document.getElementById("speed").innerHTML = localStorage.getItem("speed");
+                document.getElementById("crew").innerHTML = localStorage.getItem("crew");
+                document.getElementById("kills").innerHTML = localStorage.getItem("kills");
+
             </script>
         </html>

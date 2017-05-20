@@ -57,15 +57,24 @@
           <h4 class="modal-title">Earth Exploration</h4>
         </div>
         <div class="modal-body">
-          <h4>Earth is the cradle of humanity. 5 crew members have been assigned to the ship.</h4>
+          <h4>Earth is the cradle of humanity and is governed by the UN. There is currently a peace treaty between Earth and Mars so your Martian frigate will not be fired upon.</h4>
+          <h4>5 Martian marines in the embassy asked to be assigned to your ship. Crew has been increased by 5.</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var crew = Number(localStorage.getItem("crew"));
+			crew += 5;
+			localStorage.setItem("crew",crew);
+		});
+	</script>
 
 </body>
 </html>
