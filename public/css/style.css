@@ -57,6 +57,10 @@ input {
 	text-align: center;
 }
 
+.col-md-1 {
+	text-align: center;
+}
+
 #mars {
 	float: left;
 	text-align: left;
