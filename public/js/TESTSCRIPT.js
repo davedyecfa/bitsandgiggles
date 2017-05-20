@@ -18,7 +18,7 @@
     return false;
   	};
    this.attack = function(defender){
-   	$("#scrollbox").append("<p>"+this.user+ " attacked</p>");
+   	$("#scrollbox").append(this.user+ " attacked");
 	  	var roll = Math.random() * (20) + this.speed;
 		if(roll >= Math.random() * (20) + defender.speed){
 		defender.hp -= this.weapon;
@@ -130,9 +130,9 @@ $("#attack").on("click", function(){
 				console.log(tuser.kills);
 
 		}
-	Load(tuser,tpir);
+	
 });
 $("#defend").on ("click", function(){
-	Load(tuser,tpir);
+	
 })
 
