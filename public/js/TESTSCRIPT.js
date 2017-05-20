@@ -75,9 +75,9 @@ function Pirate( user, hp, weapon, speed, location){
 }
 
 
-var tuser = new Player("Test user", 600, 60, 5, 100, "A1");
+var tuser = new Player("Player", 400, 60, 5, 100, "A1");
 
-var tpir = new Pirate("Test Pirate", 500, 60, 5, "A1");
+var tpir = new Pirate("Pirate", 200, 40, 2, "A1");
 
 
 
@@ -97,6 +97,9 @@ $("#attack").on("click", function(){
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
 				tuser.kills++;
+				setTimeout(1000,function(){
+					window.location.replace("./game.html");
+				})
 				console.log(tuser.kills);
 			}
 			break;
@@ -110,6 +113,9 @@ $("#attack").on("click", function(){
 			else{
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
+				setTimeout(1000,function(){
+					window.location.replace("./game_over.html");
+				})
 				tuser.kills++;
 				console.log(tuser.kills);
 
@@ -121,10 +127,17 @@ $("#attack").on("click", function(){
 			if(tuser.hp <= 0){
 				$("#scrollbox").prepend("YOU ARE DEFEATED. A CAPTAIN ALWAYS GOES DOWN WITH HIS SHIP." +"\n");
 				$("#buttons").empty();
+				setTimeout(1000,function(){
+					window.location.replace("./game_over.html");
+				})
 		}
 		if(tpir.hp <= 0){
 			$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
+				setTimeout(1000,function(){
+					window.location.replace("./game.html");
+				})
+				
 				tuser.kills++;
 				console.log(tuser.kills);
 
