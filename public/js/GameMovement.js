@@ -46,6 +46,7 @@ function Move(){
 				locationArr[0] = x;
 				var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
+				localStorage.setItem("loc",NewLocation);
 				$("#target-move").html("<p>" + tuser.location + "</p>");
 				RMove();
 				LocalAct(NewLocation);
@@ -66,6 +67,7 @@ function Move(){
 			locationArr[0] = x;
 			var NewLocation = locationArr.join();
 			tuser.location = NewLocation;
+			localStorage.setItem("loc",NewLocation);
 			$("#target-move").html("<p>" + tuser.location + "</p>");
 			LMove();
 			LocalAct(NewLocation);
@@ -85,6 +87,7 @@ function Move(){
 			locationArr[1] = y;
 			var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
+				localStorage.setItem("loc",NewLocation);
 				$("#target-move").html("<p>" + tuser.location + "</p>");
 				UMove();	
 				LocalAct(NewLocation);
@@ -103,6 +106,7 @@ function Move(){
 			locationArr[1] = y;
 			var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
+				localStorage.setItem("loc",NewLocation);
 				$("#target-move").html("<p>" + tuser.location + "</p>");
 				DMove();
 				LocalAct();
@@ -117,8 +121,9 @@ function Move(){
 	}
 }
 
+var loc = localStorage.getItem("loc");
 
-var tuser = new Player("Test user", 600, 300, 1, 100, 1, "7,10");
+var tuser = new Player("Test user", 600, 300, 1, 100, 1, loc);
 
 var locationArr = tuser.location.split(",");
 var Normal = new Move();
