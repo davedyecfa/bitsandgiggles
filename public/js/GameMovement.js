@@ -287,7 +287,7 @@ var canvas = document.getElementById('GameMap'),
 		c.fill();
 		//Venus (9,9)
 		c.beginPath();
-		c.fillStyle = "skyblue";
+		c.fillStyle = "yellow";
 		c.arc(425,425,10, 0, Math.PI * 2, false);
 		c.fill();
 		//Earth (6,6)
@@ -307,17 +307,17 @@ var canvas = document.getElementById('GameMap'),
 		c.fill();
 		//Saturn (4,12)
 		c.beginPath();
-		c.fillStyle = "brown";
+		c.fillStyle = "tan";
 		c.arc(175,575,17, 0, Math.PI * 2, false);
 		c.fill();
 		//Uranus (13,8)
 		c.beginPath();
-		c.strokeStyle = "yellow";
+		c.fillStyle = "skyblue";
 		c.arc(625,375,12, 0, Math.PI * 2, false);
 		c.fill();
 		//Neptune (3,4)
 		c.beginPath();
-		c.fillStyle = "purple";
+		c.fillStyle = "skyblue";
 		c.arc(125,175,18, 0, Math.PI * 2, false);
 		c.fill();
 		//Pluto (14,15)
@@ -340,146 +340,182 @@ function LocalAct(){
 
 		case "2,4": //PIRATE 2
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 	
 		case "2,5": //PIRATE 3
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "2,13": //PIRATE 4
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "3,3": //PIRATE 5
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "3,4": //Planet Neptune
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/neptune.html");
 		break;
 
 		case "3,5"://PIRATE 6
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,3": //PIRATE 7
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,4": //PIRATE 8
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,5": //PIRATE 9
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,8": //PIRATE 10
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,10"://PIRATE  11
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "4,12": //Planet Saturn
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/saturn.html");
 		break;
 
 		case "6,2": //PIRATE 12
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "6,3": //PIRATE 13
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "6,6": //Planet Earth
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/earth.html");
 		break;
 
 		case "6,12"://PIRATE  14
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "7,10": //Planet Mars
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/mars.html");
 		break;
 
 		case "8,2"://PIRATE  15
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "8,6": //PIRATE 16
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "8,7"://Planet Mercury and sun warning
 $("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
+window.location.replace("./planets/mercury.html");
 		break;
 
 		case "8,8"://SUN Instant death 
 $("#target-move").html("YOURE DEAD!");
+window.location.replace("./game_over.html");
 		break;
 
 		case "9,9": //Planet Venus
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/venus.html");
 		break;
 
 		case "10,3": //PIRATE 17
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "10,9": //PIRATE 18
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "10,11": //PIRATE 19
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "11,5": //Planet Jupiter
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/jupiter.html");
 		break;
 
 		case "11,6": //PIRATE 20
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "11,14": //PIRATE 21
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "12,10": //PIRATE 22
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "12,12": //PIRATE 23
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "12,14": //PIRATE 24
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "13,2": //PIRATE 25
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "13,8": //Planet Uranus
 $("#target-move").html(tuser.location);
+window.location.replace("./planets/uranus.html");
 		break;
 
 		case "14,4": //PIRATE 26
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "14,6": //PIRATE 27
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 
 		case "14,11": //PIRATE 28
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 		case "14,13": //PIRATE 29
 $("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
@@ -487,10 +523,12 @@ $("#target-move").html("Caution you are entering Pirate controlled space. Turn a
 
 		case "14,15": //Planet Pluto and Pirate space warning
 $("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
+window.location.replace("./planets/pluto.html");
 		break;
 
 		case "15,15": //PIRATE BOSS
 $("#target-move").html(tuser.location);
+window.location.replace("./battle.html");
 		break;
 		
 		case "7,7": //Sunwarning
