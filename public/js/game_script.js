@@ -97,6 +97,9 @@ $("#attack").on("click", function(){
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				setTimeout(function(){
 					window.location.replace("./game.html");
 				},4000);
@@ -117,6 +120,9 @@ $("#attack").on("click", function(){
 					window.location.replace("./game_over.html");
 				},4000);
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				console.log(tuser.kills);
 
 			}
@@ -139,6 +145,9 @@ $("#attack").on("click", function(){
 				},4000);
 				
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				console.log(tuser.kills);
 
 		}
@@ -163,6 +172,9 @@ $("#defend").on ("click", function(){
 				$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				console.log(tuser.kills);
 			}
 			break;
@@ -178,6 +190,9 @@ $("#defend").on ("click", function(){
 			else{
 				$("#scrollbox").prepend("<p>"+tpir.user+" is defeated!" +"\n");
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				console.log(tuser.kills);
 
 			}
@@ -193,6 +208,9 @@ $("#defend").on ("click", function(){
 			$("#scrollbox").prepend(tpir.user+" is defeated!" +"\n");
 				$("#buttons").empty();
 				tuser.kills++;
+				var userKills = localStorage.getItem("kills");
+				userKills++;
+				localStorage.setItem("kills",userKills);
 				console.log(tuser.kills);
 
 		}});

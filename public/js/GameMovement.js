@@ -118,7 +118,7 @@ function Move(){
 }
 
 
-var tuser = new Player("Test user", 600, 300, 1, 100, 1, "6,6");
+var tuser = new Player("Test user", 600, 300, 1, 100, 1, "7,10");
 
 var locationArr = tuser.location.split(",");
 var Normal = new Move();

@@ -2,13 +2,13 @@
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
 console.log("loading create.js");
 // when user clicks add-btn
-$("#add-btn").on("click", function(event) {
+$("#start").on("click", function(event) {
   event.preventDefault();
 console.log("running create.js");
   // make a newCharacter obj
   var newShip = {
     // shipname from shipname input
-    shipname: $("#name").val().trim(),
+    shipname: $("#username").val().trim(),
     health: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
     railgun: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
     scanner: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
