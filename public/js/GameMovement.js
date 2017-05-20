@@ -333,24 +333,24 @@ function LocalAct(){
 
 	switch(tuser.location){
 
-		case "2,3"://PIRATE 
+		case "2,3"://PIRATE 1
 		$("#target-move").html(tuser.location);
 
 		break;
 
-		case "2,4": //PIRATE 
+		case "2,4": //PIRATE 2
 $("#target-move").html(tuser.location);
 		break;
 	
-		case "2,5": //PIRATE 
+		case "2,5": //PIRATE 3
 $("#target-move").html(tuser.location);
 		break;
 
-		case "2,13": //PIRATE 
+		case "2,13": //PIRATE 4
 $("#target-move").html(tuser.location);
 		break;
 
-		case "3,3": //PIRATE 
+		case "3,3": //PIRATE 5
 $("#target-move").html(tuser.location);
 		break;
 
@@ -358,27 +358,27 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "3,5"://PIRATE 
+		case "3,5"://PIRATE 6
 $("#target-move").html(tuser.location);
 		break;
 
-		case "4,3": //PIRATE 
+		case "4,3": //PIRATE 7
 $("#target-move").html(tuser.location);
 		break;
 
-		case "4,4": //PIRATE 
+		case "4,4": //PIRATE 8
 $("#target-move").html(tuser.location);
 		break;
 
-		case "4,5": //PIRATE 
+		case "4,5": //PIRATE 9
 $("#target-move").html(tuser.location);
 		break;
 
-		case "4,8": //PIRATE 
+		case "4,8": //PIRATE 10
 $("#target-move").html(tuser.location);
 		break;
 
-		case "4,10"://PIRATE  
+		case "4,10"://PIRATE  11
 $("#target-move").html(tuser.location);
 		break;
 
@@ -386,11 +386,11 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "6,2": //PIRATE 
+		case "6,2": //PIRATE 12
 $("#target-move").html(tuser.location);
 		break;
 
-		case "6,3": //PIRATE 
+		case "6,3": //PIRATE 13
 $("#target-move").html(tuser.location);
 		break;
 
@@ -398,7 +398,7 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "6,12"://PIRATE  
+		case "6,12"://PIRATE  14
 $("#target-move").html(tuser.location);
 		break;
 
@@ -406,16 +406,16 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "8,2"://PIRATE  
+		case "8,2"://PIRATE  15
 $("#target-move").html(tuser.location);
 		break;
 
-		case "8,6": //PIRATE 
+		case "8,6": //PIRATE 16
 $("#target-move").html(tuser.location);
 		break;
 
 		case "8,7"://Planet Mercury and sun warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "8,8"://SUN Instant death 
@@ -426,15 +426,15 @@ $("#target-move").html("YOURE DEAD!");
 $("#target-move").html(tuser.location);
 		break;
 
-		case "10,3": //PIRATE 
+		case "10,3": //PIRATE 17
 $("#target-move").html(tuser.location);
 		break;
 
-		case "10,9": //PIRATE 
+		case "10,9": //PIRATE 18
 $("#target-move").html(tuser.location);
 		break;
 
-		case "10,11": //PIRATE 
+		case "10,11": //PIRATE 19
 $("#target-move").html(tuser.location);
 		break;
 
@@ -442,27 +442,27 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "11,6": //PIRATE 
+		case "11,6": //PIRATE 20
 $("#target-move").html(tuser.location);
 		break;
 
-		case "11,14": //PIRATE 
+		case "11,14": //PIRATE 21
 $("#target-move").html(tuser.location);
 		break;
 
-		case "12,10": //PIRATE 
+		case "12,10": //PIRATE 22
 $("#target-move").html(tuser.location);
 		break;
 
-		case "12,12": //PIRATE 
+		case "12,12": //PIRATE 23
 $("#target-move").html(tuser.location);
 		break;
 
-		case "12,14": //PIRATE 
+		case "12,14": //PIRATE 24
 $("#target-move").html(tuser.location);
 		break;
 
-		case "13,2": //PIRATE 
+		case "13,2": //PIRATE 25
 $("#target-move").html(tuser.location);
 		break;
 
@@ -470,23 +470,23 @@ $("#target-move").html(tuser.location);
 $("#target-move").html(tuser.location);
 		break;
 
-		case "14,4": //PIRATE 
+		case "14,4": //PIRATE 26
 $("#target-move").html(tuser.location);
 		break;
 
-		case "14,6": //PIRATE 
+		case "14,6": //PIRATE 27
 $("#target-move").html(tuser.location);
 		break;
 
-		case "14,11": //PIRATE 
+		case "14,11": //PIRATE 28
 $("#target-move").html(tuser.location);
 		break;
-		case "14,13": //PIRATE 
-$("#target-move").html(tuser.location);
+		case "14,13": //PIRATE 29
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "14,15": //Planet Pluto and Pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "15,15": //PIRATE BOSS
@@ -494,59 +494,59 @@ $("#target-move").html(tuser.location);
 		break;
 		
 		case "7,7": //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "7,8":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "7,9":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "8,9":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "9,7":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "9,8":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 
 		case "9,9":  //Sunwarning
-$("#target-move").html(tuser.location);
+$("#target-move").html("ALERT! You are close to the sun! Entering is certain death!");
 		break;
 		
 		case "15,13": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "15,14": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "13,13": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "13,14": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "13,15": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "14,14": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 
 		case "14,13": //pirate space warning
-$("#target-move").html(tuser.location);
+$("#target-move").html("Caution you are entering Pirate controlled space. Turn around now to stay safe!");
 		break;
 	}
 }
