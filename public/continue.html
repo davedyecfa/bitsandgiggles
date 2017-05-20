@@ -12,6 +12,9 @@
    <!--Google fonts links-->
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
    <!--My CSS Stylesheet link-->
     <link rel='stylesheet' type='text/css' href='css/style.css'>
 
@@ -30,7 +33,7 @@
             <ul>
                 <li><h2>Username: <input id="text1" type="text" name="username"></h2></li>
                 <li><h2>Password: <input id="text2" type="password" name="password"></h2></li>
-                <li><a data-toggle="modal" href="#login" onclick="validate();" ><img src="./img/continue_start.png"></a></li>
+                <li><a data-toggle="modal" href="#login" onclick="validate();"><img src="./img/continue_start.png"></a></li>
                 <li><a href="./index.html"><img src="./img/back.png"></a></li>
                 </li>
             </ul>
@@ -48,10 +51,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Continue a Saved Game</h2>
+          <h4 class="modal-title">Continue a Saved Game</h4>
         </div>
         <div class="modal-body">
-          <h2 id="validation"></h2>
+          <h4 id="validation"></h4>
         </div>
         <div class="modal-footer">
           <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -67,15 +70,22 @@ function validate()
     if(   document.getElementById("text1").value == "Rocinante"
        && document.getElementById("text2").value == "123" )
     {
-        alert( "Sign in successfull. Enjoy the game!" );
+        //alert( "Sign in successfull. Enjoy the game!" );
         // this will take us straight to the game page
-        location.href="game.html";
+        $("#validation").html("Welcome back! Enjoy the game!")
+        setTimeout(function(){
+            location.href="game.html";
+        },3000);
+        
     }
     else
     {
+        $("#validation").html("Incorrect username or password. Please try again!")
+        setTimeout(function(){
+            location.href="continue.html";
+        },3000);
         // this will take you to simple error page
-        alert( "Sign in failed. Check username or password." );
-        location.href="continue.html";
+        //alert( "Sign in failed. Check username or password." );
     }
 }
 </script>
