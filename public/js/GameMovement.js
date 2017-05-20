@@ -46,13 +46,13 @@ function Move(){
 				locationArr[0] = x;
 				var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
-				$("#target-move").prepend("<p>" + tuser.location + "</p>");
+				$("#target-move").html("<p>" + tuser.location + "</p>");
 				RMove();
 				LocalAct(NewLocation);
 
 			}
 			else{
-				$("#target-move").prepend("<p> You can not go any further in this direction.</p>")
+				$("#target-move").html("<p> You can not go any further in this direction.</p>")
 			}
 		}
 	}
@@ -66,12 +66,12 @@ function Move(){
 			locationArr[0] = x;
 			var NewLocation = locationArr.join();
 			tuser.location = NewLocation;
-			$("#target-move").prepend("<p>" + tuser.location + "</p>");
+			$("#target-move").html("<p>" + tuser.location + "</p>");
 			LMove();
 			LocalAct(NewLocation);
 			}
 			else{
-				$("#target-move").prepend("<p> You can not go any further in this direction.</p>")
+				$("#target-move").html("<p> You can not go any further in this direction.</p>")
 			}
 
 		}
@@ -85,12 +85,12 @@ function Move(){
 			locationArr[1] = y;
 			var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
-				$("#target-move").prepend("<p>" + tuser.location + "</p>");
+				$("#target-move").html("<p>" + tuser.location + "</p>");
 				UMove();	
 				LocalAct(NewLocation);
 			}
 			else{
-				$("#target-move").prepend("<p> You can not go any further in this direction.</p>")
+				$("#target-move").html("<p> You can not go any further in this direction.</p>")
 			}
 		}
 
@@ -103,12 +103,12 @@ function Move(){
 			locationArr[1] = y;
 			var NewLocation = locationArr.join();
 				tuser.location = NewLocation;
-				$("#target-move").prepend("<p>" + tuser.location + "</p>");
+				$("#target-move").html("<p>" + tuser.location + "</p>");
 				DMove();
 				LocalAct();
 			}
 			else{
-				$("#target-move").prepend("<p> You can not go any further in this direction.</p>")
+				$("#target-move").html("<p> You can not go any further in this direction.</p>")
 			}
 
 			
@@ -124,7 +124,7 @@ var locationArr = tuser.location.split(",");
 var Normal = new Move();
 
 function Location(user){
-$("#target-move").prepend("<p>Current location: " + tuser.location + "</p>");
+$("#target-move").html("<p>Current location: " + tuser.location + "</p>");
 }
 $(document).ready(Location(tuser));
 
@@ -132,6 +132,32 @@ $("#right").on("click", function(){Normal.right(tuser.speed)});
 $("#left").on("click", function(){Normal.left(tuser.speed)});
 $("#down").on("click", function(){Normal.down(tuser.speed)});
 $("#up").on("click", function(){Normal.up(tuser.speed)});
+
+window.addEventListener("keydown", onKeyDown, false);
+
+
+function onKeyDown(event){
+  var keyCode = event.keyCode;
+  switch(keyCode){
+  	case 87: //w
+      console.log("w");
+      Normal.up(tuser.speed)
+    break;
+    case 68:  //d
+        console.log("d");
+        Normal.right(tuser.speed);
+    break;
+    case 83:  //s
+        console.log("s");
+        Normal.down(tuser.speed)
+    break;
+    case 65:  //a
+    console.log("a");
+   Normal.left(tuser.speed)
+       
+    break;
+  }
+}
 
 
 var canvas = document.getElementById('GameMap'),
@@ -308,226 +334,219 @@ function LocalAct(){
 	switch(tuser.location){
 
 		case "2,3"://PIRATE 
-		$("#target-move").prepend(tuser.location);
+		$("#target-move").html(tuser.location);
 
 		break;
 
 		case "2,4": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 	
 		case "2,5": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "2,13": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "3,3": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "3,4": //Planet Neptune
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "3,5"://PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,3": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,4": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,5": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,8": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,10"://PIRATE  
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "4,12": //Planet Saturn
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "6,2": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "6,3": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "6,6": //Planet Earth
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "6,12"://PIRATE  
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "7,10": //Planet Mars
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "8,2"://PIRATE  
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "8,6": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "8,7"://Planet Mercury and sun warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "8,8"://SUN Instant death 
-$("#target-move").prepend("YOURE DEAD!");
+$("#target-move").html("YOURE DEAD!");
 		break;
 
 		case "9,9": //Planet Venus
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "10,3": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "10,9": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "10,11": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "11,5": //Planet Jupiter
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "11,6": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "11,14": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "12,10": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "12,12": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "12,14": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "13,2": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "13,8": //Planet Uranus
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,4": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,6": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,11": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 		case "14,13": //PIRATE 
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,15": //Planet Pluto and Pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "15,15": //PIRATE BOSS
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 		
 		case "7,7": //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "7,8":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "7,9":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "8,9":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "9,7":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "9,8":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "9,9":  //Sunwarning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 		
 		case "15,13": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "15,14": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "13,13": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "13,14": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "13,15": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,14": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 
 		case "14,13": //pirate space warning
-$("#target-move").prepend(tuser.location);
+$("#target-move").html(tuser.location);
 		break;
 	}
 }
-
-
-	
-
-
-
-
