@@ -18,7 +18,7 @@ thrustername varchar(128)
 );
 select * from users;
 use TestsDB;
-select * from users;
+select * from pirates;
 insert into users(Username,Location, Hp, Weapon, speed, crew, sensor, kills, armor, sensorname, weaponname, thrustername)
 values("Socks","1,1", 200 , 25, 2, 500, 0, 1, "Martian", "V.1", "Railgun", "V.2-AB");
 
